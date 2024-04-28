@@ -4,17 +4,33 @@ import React from "react";
 /* app imports */
 import plusIconWhite from "../../assets/icons/plus-icon-ffffff.svg";
 import minusIconWhite from "../../assets/icons/minus-icon-ffffff.svg";
+import { useAppDispatch } from "../../redux-store/hooks";
+import { counterIncrement, coutnerDecrement } from "../../redux-store/actions/counter";
 
 /* component */
 function Buttons(): JSX.Element {
+  const reduxDispatch = useAppDispatch();
+
+  function handleOnIncrement() {
+    reduxDispatch(counterIncrement());
+  }
+
+  function handleOnDecrement() {
+    reduxDispatch(coutnerDecrement());
+  }
+
   return (
     <>
       <div className="buttonContainer text-center customRow">
-        <button type="button" className="btn btn-default counterBtn white decrement">
+        {/* decrement button */}
+        <button type="button" className="btn btn-default counterBtn white decrement"
+        onClick={handleOnDecrement}>
           <img src={minusIconWhite} className="img-fluid center-block"
           alt="Decrement" title="Decrement"/>
         </button>
-        <button type="button" className="btn btn-default counterBtn white increment">
+        {/* increment button */}
+        <button type="button" className="btn btn-default counterBtn white increment"
+        onClick={handleOnIncrement}>
           <img src={plusIconWhite} className="img-fluid center-block"
           alt="Increment" title="Increment"/>
         </button>
