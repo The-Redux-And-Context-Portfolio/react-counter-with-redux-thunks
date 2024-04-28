@@ -13,8 +13,8 @@ function Counter(): JSX.Element {
   return (
     <>
       <div className="posContainer text-center">
-        <span className="num">{ counter }</span>
-        <span className="name">{ numberName }</span>
+        <span className="num" data-testid="counterElem">{ counter }</span>
+        <span className="name" data-testid="counterNameElem">{ numberName }</span>
       </div>
     </>
   );
