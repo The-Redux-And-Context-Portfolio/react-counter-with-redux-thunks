@@ -15,12 +15,14 @@ function Controls(): JSX.Element {
       <div className="controls customRow">
         {/* sound button */}
         <button type="button" className="btn btn-default"
+        data-testid="soundBtn"
         onClick={handleOnSound}>
-          <img {...soundIcon} />
+          <img {...soundIcon} data-testid="soundIcon"/>
         </button>
 
         {/* reset button */}
         <button type="button" className="btn btn-default"
+        data-testid="resetBtn"
         onClick={handleOnReset}>
           <img src={resetIconWhite} className="img-fluid center-block"
           alt="Counter - Reset" title="Counter - Reset"/>

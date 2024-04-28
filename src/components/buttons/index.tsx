@@ -29,12 +29,14 @@ function Buttons(): JSX.Element {
       <div className="buttonContainer text-center customRow">
         {/* decrement button */}
         <button type="button" className="btn btn-default counterBtn white decrement"
+        data-testid="decBtn"
         onClick={handleOnDecrement}>
           <img src={minusIconWhite} className="img-fluid center-block"
           alt="Decrement" title="Decrement"/>
         </button>
         {/* increment button */}
         <button type="button" className="btn btn-default counterBtn white increment"
+        data-testid="incBtn"
         onClick={handleOnIncrement}>
           <img src={plusIconWhite} className="img-fluid center-block"
           alt="Increment" title="Increment"/>
