@@ -3,21 +3,20 @@ import React from "react";
 
 /* app imports */
 import resetIconWhite from "../../assets/icons/reset-icon-white.svg";
-import resetIconBlack from "../../assets/icons/reset-icon-black.svg";
-import soundIconWhite from "../../assets/icons/sound-icon-white.svg";
-import muteIconWhite from "../../assets/icons/mute-icon-white.svg";
 import useOnReset from "../hooks/use-on-reset";
+import useSoundHook from "../hooks/use-sound-hook";
 
 /* component */
 function Controls(): JSX.Element {
   const { handleOnReset } = useOnReset();
+  const { soundIcon, handleOnSound } = useSoundHook();
   return (
     <>
       <div className="controls customRow">
         {/* sound button */}
-        <button type="button" className="btn btn-default">
-          <img src={soundIconWhite} className="img-fluid center-block"
-          alt="" title=""/>
+        <button type="button" className="btn btn-default"
+        onClick={handleOnSound}>
+          <img {...soundIcon} />
         </button>
 
         {/* reset button */}
