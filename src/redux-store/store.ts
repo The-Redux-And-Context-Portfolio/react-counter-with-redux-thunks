@@ -4,11 +4,17 @@ import { configureStore } from "@reduxjs/toolkit";
 /* app imports */
 import centralReducer from "./cominbed-reducers";
 
+const defaultState = {
+  sound: true,
+  counter: 0
+};
+
 /* redux store */
-function createReduxStore() {
+function createReduxStore(preloadedState = defaultState) {
   return configureStore({
     reducer: centralReducer(),
-    devTools: true
+    devTools: true,
+    preloadedState
   });
 }
 
