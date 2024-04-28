@@ -8,7 +8,6 @@ import { soundOff, soundOn } from "../../redux-store/actions/sound";
 import soundIconWhite from "../../assets/icons/sound-icon-white.svg";
 import muteIconWhite from "../../assets/icons/mute-icon-white.svg";
 import getSound from "../../redux-store/selectors/get-sound";
-import playClickSound from "../utils/click-sound";
 
 /* hook */
 function useSoundHook() {
@@ -26,9 +25,6 @@ function useSoundHook() {
       reduxDispatch(soundOn());
       setSoundIcon(soundOnIcon);
     }
-
-    /* we can always play the click sound for this element */
-    playClickSound();
   }
 
   return {

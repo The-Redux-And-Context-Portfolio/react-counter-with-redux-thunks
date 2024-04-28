@@ -4,19 +4,24 @@ import React from "react";
 /* app imports */
 import plusIconWhite from "../../assets/icons/plus-icon-ffffff.svg";
 import minusIconWhite from "../../assets/icons/minus-icon-ffffff.svg";
-import { useAppDispatch } from "../../redux-store/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux-store/hooks";
 import { counterIncrement, coutnerDecrement } from "../../redux-store/actions/counter";
+import playClickSound from "../utils/click-sound";
+import getSound from "../../redux-store/selectors/get-sound";
 
 /* component */
 function Buttons(): JSX.Element {
+  const sound = useAppSelector(getSound);
   const reduxDispatch = useAppDispatch();
 
   function handleOnIncrement() {
     reduxDispatch(counterIncrement());
+    sound && playClickSound();
   }
 
   function handleOnDecrement() {
     reduxDispatch(coutnerDecrement());
+    sound && playClickSound();
   }
 
   return (
