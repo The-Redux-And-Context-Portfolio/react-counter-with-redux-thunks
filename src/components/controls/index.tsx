@@ -23,7 +23,7 @@ function Controls(): JSX.Element {
         <button type="button" className="btn btn-default"
         onClick={handleOnReset}>
           <img src={resetIconWhite} className="img-fluid center-block"
-          alt="" title=""/>
+          alt="Counter - Reset" title="Counter - Reset"/>
         </button>
       </div>
     </>
