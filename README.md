@@ -4,7 +4,7 @@
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   89.61 |    63.63 |   93.33 |   89.47 |                   
+All files                  |   88.88 |    63.63 |   92.85 |   88.73 |                   
  src                       |   33.33 |      100 |     100 |   33.33 |                   
   App.tsx                  |     100 |      100 |     100 |     100 |                   
   index.tsx                |       0 |      100 |     100 |       0 | 11-12             
@@ -25,9 +25,6 @@ All files                  |   89.61 |    63.63 |   93.33 |   89.47 |
  src/redux-store           |     100 |        0 |     100 |     100 |                   
   cominbed-reducers.ts     |     100 |      100 |     100 |     100 |                   
   store.ts                 |     100 |        0 |     100 |     100 | 13                
- src/redux-store/actions   |     100 |      100 |     100 |     100 |                   
-  counter.ts               |     100 |      100 |     100 |     100 |                   
-  sound.ts                 |     100 |      100 |     100 |     100 |                   
  src/redux-store/hooks     |     100 |      100 |     100 |     100 |                   
   index.ts                 |     100 |      100 |     100 |     100 |                   
  src/redux-store/reducers  |     100 |      100 |     100 |     100 |                   
@@ -39,9 +36,9 @@ All files                  |   89.61 |    63.63 |   93.33 |   89.47 |
  src/test                  |     100 |      100 |     100 |     100 |                   
   render-with-provider.tsx |     100 |      100 |     100 |     100 |                   
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 8 passed, 8 total
-Tests:       28 passed, 28 total
+Test Suites: 7 passed, 7 total
+Tests:       23 passed, 23 total
 Snapshots:   0 total
-Time:        4.778 s
+Time:        4.896 s
 Ran all test suites.
 ```
