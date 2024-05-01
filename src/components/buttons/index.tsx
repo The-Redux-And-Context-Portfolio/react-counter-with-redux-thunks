@@ -5,7 +5,7 @@ import React from "react";
 import plusIconWhite from "../../assets/icons/plus-icon-ffffff.svg";
 import minusIconWhite from "../../assets/icons/minus-icon-ffffff.svg";
 import { useAppDispatch, useAppSelector } from "../../redux-store/hooks";
-import { counterIncrement, coutnerDecrement } from "../../redux-store/actions/counter";
+import { increment, decrement } from "../../redux-store/reducers/counter";
 import playClickSound from "../utils/click-sound";
 import getSound from "../../redux-store/selectors/get-sound";
 
@@ -15,12 +15,12 @@ function Buttons(): JSX.Element {
   const reduxDispatch = useAppDispatch();
 
   function handleOnIncrement() {
-    reduxDispatch(counterIncrement());
+    reduxDispatch(increment());
     sound && playClickSound();
   }
 
   function handleOnDecrement() {
-    reduxDispatch(coutnerDecrement());
+    reduxDispatch(decrement());
     sound && playClickSound();
   }
 

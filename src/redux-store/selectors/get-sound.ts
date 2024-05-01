@@ -2,10 +2,10 @@
 import { RootState } from "../store";
 
 /* module */
-function getCounter(state: RootState): boolean {
+function getSound(state: RootState): boolean {
   const { sound } = state;
   return sound;
 }
 
 /* exports */
-export default getCounter;
+export default getSound;

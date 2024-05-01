@@ -1,23 +1,24 @@
 /* node modules */
-import { createReducer } from "@reduxjs/toolkit";
-
-/* app imports */
-import { counterReset, counterIncrement, coutnerDecrement } from "../actions/counter";
+import { createSlice } from "@reduxjs/toolkit";
 
 /* reducer */
 const initialState = 0;
-const counterReducer = createReducer(initialState, (builder) => {
-  builder
-    .addCase(counterReset, () => {
-      return 0;
-    })
-    .addCase(counterIncrement, (state) => {
+const counterSlice = createSlice({
+  name: "counter",
+  initialState,
+  reducers: {
+    increment: (state) => {
       return state + 1;
-    })
-    .addCase(coutnerDecrement, (state) => {
+    },
+    decrement: (state) => {
       return state - 1;
-    });
+    },
+    reset: () => {
+      return 0;
+    }
+  }
 });
 
 /* exports */
-export default counterReducer;
+export const { increment, decrement, reset } = counterSlice.actions;
+export default counterSlice.reducer;

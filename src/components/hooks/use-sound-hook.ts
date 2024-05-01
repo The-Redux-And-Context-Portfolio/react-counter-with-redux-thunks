@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../redux-store/hooks/index";
 
 /* app imports */
 import { soundOffIcon, soundOnIcon } from "../utils/sound-icons";
-import { soundOff, soundOn } from "../../redux-store/actions/sound";
+import { off as soundOff, on as soundOn } from "../../redux-store/reducers/sound";
 import soundIconWhite from "../../assets/icons/sound-icon-white.svg";
 import muteIconWhite from "../../assets/icons/mute-icon-white.svg";
 import getSound from "../../redux-store/selectors/get-sound";

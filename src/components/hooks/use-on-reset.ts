@@ -1,6 +1,6 @@
 /* app imports */
 import { useAppDispatch, useAppSelector } from "../../redux-store/hooks/index";
-import { counterReset } from "../../redux-store/actions/counter";
+import { reset } from "../../redux-store/reducers/counter";
 import getSound from "../../redux-store/selectors/get-sound";
 import playResetSound from "../utils/reset-sound";
 
@@ -10,7 +10,7 @@ function useOnReset() {
   const reduxDispatch = useAppDispatch();
 
   function handleOnReset() {
-    reduxDispatch(counterReset());
+    reduxDispatch(reset());
     sound && playResetSound();
   }
 
