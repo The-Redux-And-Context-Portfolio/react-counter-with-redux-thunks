@@ -77,6 +77,28 @@
     }
   }
 }
+.loaderFrame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  .posContainer {
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    padding: 10px;
+    img {
+      margin-right: 5px;
+      width: 40px;
+    }
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .mainContainer {

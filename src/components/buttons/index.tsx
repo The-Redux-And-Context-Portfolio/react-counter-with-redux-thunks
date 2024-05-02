@@ -5,7 +5,7 @@ import React from "react";
 import plusIconWhite from "../../assets/icons/plus-icon-ffffff.svg";
 import minusIconWhite from "../../assets/icons/minus-icon-ffffff.svg";
 import { useAppDispatch, useAppSelector } from "../../redux-store/hooks";
-import { increment, decrement } from "../../redux-store/reducers/counter";
+import { counterIncrement, counterDecrement } from "../../redux-store/thunks/counter";
 import playClickSound from "../utils/click-sound";
 import getSound from "../../redux-store/selectors/get-sound";
 
@@ -14,13 +14,13 @@ function Buttons(): JSX.Element {
   const sound = useAppSelector(getSound);
   const reduxDispatch = useAppDispatch();
 
-  function handleOnIncrement() {
-    reduxDispatch(increment());
+  async function handleOnIncrement() {
+    await reduxDispatch(counterIncrement()).unwrap();
     sound && playClickSound();
   }
 
-  function handleOnDecrement() {
-    reduxDispatch(decrement());
+  async function handleOnDecrement() {
+    await reduxDispatch(counterDecrement()).unwrap();
     sound && playClickSound();
   }
 

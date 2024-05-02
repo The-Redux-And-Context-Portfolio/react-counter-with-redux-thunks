@@ -6,7 +6,8 @@ import centralReducer from "./cominbed-reducers";
 
 const defaultState = {
   sound: true,
-  counter: 0
+  counter: 0,
+  loader: false
 };
 
 /* redux store */

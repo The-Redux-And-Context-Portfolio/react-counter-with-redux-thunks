@@ -7,14 +7,18 @@ import "./style.scss";
 import Counter from "./components/counter/index";
 import Buttons from "./components/buttons";
 import Controls from "./components/controls";
+import Loader from "./components/loader";
 
 function App(): JSX.Element {
   return (
-    <div className="mainContainer positionRelative">
-      <Controls />
-      <Counter />
-      <Buttons />
-    </div>
+    <>
+      <Loader />
+      <div className="mainContainer positionRelative">
+        <Controls />
+        <Counter />
+        <Buttons />
+      </div>
+    </>
   );
 }
 
