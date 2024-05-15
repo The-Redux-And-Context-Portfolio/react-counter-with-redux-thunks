@@ -11,14 +11,18 @@ import getSound from "../../redux-store/selectors/get-sound";
 
 /* component */
 function Buttons(): JSX.Element {
+  /* subscribing to state updates from the redux store */
   const sound = useAppSelector(getSound);
+  /* creating a dispatch function to send instructions to the redux store */
   const reduxDispatch = useAppDispatch();
 
+  /* event handler */
   async function handleOnIncrement() {
     await reduxDispatch(counterIncrement()).unwrap();
     sound && playClickSound();
   }
 
+  /* event handler */
   async function handleOnDecrement() {
     await reduxDispatch(counterDecrement()).unwrap();
     sound && playClickSound();
@@ -27,14 +31,15 @@ function Buttons(): JSX.Element {
   return (
     <>
       <div className="buttonContainer text-center customRow">
-        {/* decrement button */}
+        {/* Decrement button */}
         <button type="button" className="btn btn-default counterBtn white decrement"
         data-testid="decBtn"
         onClick={handleOnDecrement}>
           <img src={minusIconWhite} className="img-fluid center-block"
           alt="Decrement" title="Decrement"/>
         </button>
-        {/* increment button */}
+        
+        {/* Increment button */}
         <button type="button" className="btn btn-default counterBtn white increment"
         data-testid="incBtn"
         onClick={handleOnIncrement}>
