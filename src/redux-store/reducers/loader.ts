@@ -2,7 +2,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { counterIncrement, counterDecrement, counterReset } from "../thunks/counter";
 
-/* reducer */
+/**
+ * the reducer that takes care of the value of the loader slice. this will be controlled based on the
+ * action that we are sending into the reducer
+ **/
 const initialState = false;
 const loaderSlice = createSlice({
   name: "loader",
