@@ -8,6 +8,7 @@ import guitarSound from "../utils/guitar-sound";
 
 /* component */
 function Loader(): JSX.Element | null {
+  /* subscribe to the redux store updates */
   const { sound, loader } = useAppSelector((state) => state);
 
   useEffect(() => {
@@ -19,6 +20,7 @@ function Loader(): JSX.Element | null {
   }
   return (
     <>
+      {/* loader element that takes up the entire screen */}
       <div className="loaderFrame">
         <div className="posContainer customRow">
           <img src={circularLoadGif}
